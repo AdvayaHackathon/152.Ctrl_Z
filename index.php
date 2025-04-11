@@ -9,7 +9,7 @@
 </head>
 <body>
   <header>
-    <div class="logo">Histick</div>
+    <div class="logo">HisTick</div>
     <nav>
       <ul>
         <li><a href="index.php">Home</a></li>
