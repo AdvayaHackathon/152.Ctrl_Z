@@ -25,7 +25,7 @@
     </div>
     <?php if ($isLoggedIn): ?>
   <form method="POST" action="logout.php">
-    <button type="submit">Log Out</button>
+    <button type="submit" class="logout-btn">Log Out</button>
   </form>
 <?php endif; ?>
 

@@ -77,6 +77,23 @@
     cursor: pointer;
     color: white;
   }
+
+  .logout-btn{
+    padding: 10px 13px;
+    border-color: #007acc;
+    background-color: white;
+    color: #007acc;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.4s;
+  }
+
+  .logout-btn:hover{
+    background-color:#007acc ;
+    cursor: pointer;
+    color: white;
+  }
   
   /* HERO SECTION */
   .hero {
@@ -149,7 +166,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.95rem;
-    transition: background 0.4s;
+    transition: background-color 0.4s;
   }
   
   .search-box button:hover {
