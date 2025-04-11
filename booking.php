@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <title>Book Tickets | HisTick</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body class="ticket-body">
-
+    <?php include"header.php"; ?>
   <div class="tic-container">
-    <button class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+    <!-- <button class="back-btn"><i class="fas fa-arrow-left"></i> Back</button> -->
 
     <h1 class="tic-h1">Book Tickets</h1>
 
@@ -68,13 +69,23 @@
 
       <!-- Total Amount Display -->
       <div class="total-amount">
-        Total Amount: <strong id="totalPrice">$20</strong>
+        Total Amount: <strong id="totalPrice">₹20</strong>
       </div>
 
       <button type="submit" class="submit-btn">Complete Booking</button>
     </form>
+    <div id="successMessage" class="success-message hidden">
+  <div class="checkmark">&#10004;</div>
+  <h2>Booking Successful!</h2>
+  <p>Your ticket has been booked and saved as a PDF.</p>
+</div>
+
   </div>
 
   <script src="script.js"></script>
+  <!-- QR Code Generator -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<!-- jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 </html>

@@ -401,7 +401,7 @@
 
 .tic-container {
   max-width: 800px;
-  margin: 30px auto;
+  margin: 80px auto;
   padding: 20px;
 }
 
@@ -417,6 +417,8 @@
 
 .tic-h1 {
   font-size: 28px;
+  display: flex;
+  justify-content: center;
   font-weight: bold;
   margin-bottom: 30px;
 }
@@ -490,4 +492,37 @@ input, select {
 
 .submit-btn:hover {
   background-color: #147dd6;
+}
+
+/* success message */
+
+.success-message {
+  text-align: center;
+  padding: 30px;
+  background-color: #e8fff2;
+  border: 2px solid #2ecc71;
+  border-radius: 20px;
+  margin-top: 30px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.success-message .checkmark {
+  font-size: 48px;
+  color: #2ecc71;
+  margin-bottom: 15px;
+  animation: pop 0.4s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
