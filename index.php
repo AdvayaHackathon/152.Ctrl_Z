@@ -8,31 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="logo">HisTick</div>
-    <nav>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-      <?php session_start(); $isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
-      ?>
-    <div class="btn2" <?= $isLoggedIn ? 'style="display:none;"' : '' ?>>
-      <a href="signin.php"><button class="signin-btn" id="show-signin">Sign In</button></a>
-      <a href="signup.php"><button class="signup-btn" id="show-signup">Sign Up</button></a>
-    </div>
-    <?php if ($isLoggedIn): ?>
-  <form method="POST" action="logout.php">
-    <button type="submit" class="logout-btn">Log Out</button>
-  </form>
-<?php endif; ?>
-
-  </header>
-
-  <section class="hero">
+  <!-- header -->
+  <?php include"header.php"; ?>
+  <section class="hero" id="hero">
     <div class="overlay">
       <h1>Discover Your Next Adventure</h1>
       <p>
@@ -43,11 +21,11 @@
       <div class="search-box">
         <label for="location">Location</label>
         <input type="text" id="location" placeholder="Where do you want to go?" />
-        <button onclick="search()">Explore</button>
+        <a href="district.php"><button>Explore</button></a>
       </div>
     </div>
   </section>
-  <section class="how-it-works">
+  <section class="how-it-works" id="about">
   <h2>How It Works</h2>
   <div class="steps">
     <div class="step">
@@ -67,6 +45,7 @@
     </div>
   </div>
 </section>
+<section id="contact">
 <footer class="footer">
   <div class="footer-content">
     <div class="footer-section brand">
@@ -85,10 +64,10 @@
     <div class="footer-section">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#hero">Home</a></li>
         <li><a href="#">Destinations</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
@@ -115,6 +94,8 @@
     <p>© 2025 Histick. All rights reserved.</p>
   </div>
 </footer>
+</section>
+
 
 
 
