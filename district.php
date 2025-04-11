@@ -93,26 +93,8 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Histick</div>
-    <nav>
-      <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- <div class="btn2" >
-      <a href="signin.php"><button class="signin-btn" id="show-signin">Sign In</button></a>
-      <a href="signup.php"><button class="signup-btn" id="show-signup">Sign Up</button></a>
-    </div> -->
-    
-      <form method="POST" action="logout.php">
-        <button type="submit" class="logout-btn">Log Out</button>
-      </form>
- 
-  </header>
+
+<?php include"header.php"; ?>
 
   <!-- Bangalore Banner -->
   <section class="place-hero">
@@ -149,6 +131,8 @@
       <!-- Add more cards as needed -->
     </div>
   </section>
+
+  <?php include"footer.php"; ?>
 
 </body>
 </html>

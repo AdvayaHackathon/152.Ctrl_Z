@@ -2,10 +2,9 @@
     <div class="logo">HisTick</div>
     <nav>
       <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#">Destinations</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.php">Home🏠</a></li>
+        <li><a href="#">Favourites⭐</a></li>
+        <li><a href="#">Travel Bag🛍️</a></li>
       </ul>
     </nav>
       <?php session_start(); $isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
