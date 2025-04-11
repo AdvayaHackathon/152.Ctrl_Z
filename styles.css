@@ -44,6 +44,10 @@
     margin-right:15px ;
   }
 
+  nav a:hover{
+    color: #0056b3;
+  }
+
   .signin-btn{
     padding: 10px 13px;
     border-color: #007acc;
@@ -258,4 +262,129 @@
   text-decoration: underline;
 }
 
-  
+/* about section */
+.how-it-works {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.step {
+  max-width: 300px;
+  text-align: center;
+}
+
+.step .circle {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px;
+  background-color: #d9f0ff;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #000;
+}
+
+.step p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.footer {
+  background-color: #0c1a2b;
+  color: #fff;
+  padding: 60px 30px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section li {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #bbb;
+}
+
+.footer-section a:hover {
+  color: #1e90ff;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .icon {
+  color: #1e90ff;
+  margin-right: 8px;
+}
+
+.social-icons i {
+  margin-top: 10px;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  color: #bbb;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.social-icons i:hover {
+  color: #1e90ff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e90ff20;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
