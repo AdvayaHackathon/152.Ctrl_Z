@@ -1,3 +1,90 @@
+const popularDestinations = [
+  "Bangalore Palace, India", "Lalbagh Botanical Garden, Bangalore", "Cubbon Park, Bangalore",
+  "Tipu Sultan's Summer Palace, Bangalore", "Vidhana Soudha, Bangalore", "Nandi Hills, Bangalore",
+  "Mysore Palace, India", "Chamundi Hills, Mysore", "Brindavan Gardens, Mysore",
+  "Hampi Ruins, Karnataka", "Charminar, Hyderabad", "Golconda Fort, Hyderabad"
+];
+
+const imageRecognitionMap = {
+  palace: ["Bangalore Palace, India", "Mysore Palace, India", "Tipu Sultan's Summer Palace, Bangalore"],
+  temple: ["ISKCON Temple, Bangalore", "Meenakshi Temple, Madurai", "Hampi Ruins, Karnataka"],
+  garden: ["Lalbagh Botanical Garden, Bangalore", "Brindavan Gardens, Mysore", "Cubbon Park, Bangalore"],
+  monument: ["Charminar, Hyderabad", "Vidhana Soudha, Bangalore", "India Gate, Delhi"],
+  fort: ["Golconda Fort, Hyderabad", "Bangalore Fort", "Chitradurga Fort, Karnataka"],
+  hill: ["Nandi Hills, Bangalore", "Chamundi Hills, Mysore", "Skandagiri, Karnataka"]
+};
+
+const destinationInput = document.getElementById('destinationInput');
+const suggestionsList = document.getElementById('suggestionsList');
+const searchForm = document.getElementById('searchForm');
+const imageUpload = document.getElementById('imageUpload');
+const dateInput = document.getElementById('dateInput');
+
+// Initialize date picker
+flatpickr("#dateInput", {
+  mode: "range",
+  dateFormat: "Y-m-d"
+});
+
+// Show suggestions
+destinationInput.addEventListener('input', () => {
+  const value = destinationInput.value.toLowerCase();
+  if (value.length > 1) {
+    const matches = popularDestinations.filter(dest => dest.toLowerCase().includes(value));
+    suggestionsList.innerHTML = matches.map(dest => <li>${dest}</li>).join('');
+    suggestionsList.classList.remove('hidden');
+  } else {
+    suggestionsList.classList.add('hidden');
+  }
+});
+
+// Set selected suggestion
+suggestionsList.addEventListener('click', (e) => {
+  if (e.target.tagName === 'LI') {
+    destinationInput.value = e.target.textContent;
+    suggestionsList.classList.add('hidden');
+  }
+});
+
+// Image analysis simulation
+imageUpload.addEventListener('change', (e) => {
+  const file = e.target.files[0];
+  if (!file || !file.type.startsWith('image/')) {
+    alert("Please upload an image file.");
+    return;
+  }
+
+  alert("Analyzing image...");
+  setTimeout(() => {
+    const fileName = file.name.toLowerCase();
+    let feature = Object.keys(imageRecognitionMap).find(keyword => fileName.includes(keyword));
+    
+    if (!feature) {
+      // Fallback based on random selection
+      feature = ['palace', 'garden', 'monument', 'hill'][Math.floor(Math.random() * 4)];
+    }
+
+    const possiblePlaces = imageRecognitionMap[feature] || ["Bangalore Palace, India"];
+    const recognizedPlace = possiblePlaces[Math.floor(Math.random() * possiblePlaces.length)];
+    destinationInput.value = recognizedPlace;
+    alert(`Detected place: ${recognizedPlace}`);
+  }, 1500);
+});
+
+// Handle form submit
+searchForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const dest = destinationInput.value.trim();
+  const dates = dateInput.value.trim();
+
+
+
+  alert(`Redirecting to explore: ${dest} from ${dates}`);
+  // Example redirect logic:
+  // window.location.href = /explore?destination=${encodeURIComponent(dest)}&dates=${encodeURIComponent(dates)};
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   // === Search Box Logic ===
   const searchButton = document.querySelector(".search-box button");

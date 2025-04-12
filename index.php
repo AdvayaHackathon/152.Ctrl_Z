@@ -22,9 +22,18 @@
       </p>
 
       <div class="search-box">
+      <!-- <div class="input-group"> -->
         <label for="location">Location</label>
-        <input type="text" id="searchInput" placeholder="Where do you want to go?" />
-        <button>Explore</button>
+      <input 
+        type="text" 
+        id="destinationInput" 
+        placeholder="Where do you want to go?" 
+      />
+      <label for="imageUpload" class="upload-icon">📤</label>
+      <input type="file" id="imageUpload" accept="image/*" hidden />
+      <ul id="suggestionsList" class="suggestions hidden"></ul>
+    <!-- </div> -->
+        <button onclick="search()">Explore</button>
       </div>
     </div>
   </section>
