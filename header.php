@@ -7,7 +7,7 @@
         <li><a href="#">Travel Bag🛍️</a></li>
       </ul>
     </nav>
-      <?php session_start(); $isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+      <?php  $isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
       ?>
     <div class="btn2" <?= $isLoggedIn ? 'style="display:none;"' : '' ?>>
       <a href="signin.php"><button class="signin-btn" id="show-signin">Sign In</button></a>

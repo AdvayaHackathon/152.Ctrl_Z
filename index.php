@@ -10,6 +10,9 @@
 <body>
   <!-- header -->
   <?php include"header.php"; ?>
+  <div class="mic">
+    <a href="http://localhost:8501"><img src="images/icons8-mic-50.png" alt=""></a>
+  </div>
   <section class="hero" id="hero">
     <div class="overlay">
       <h1>Discover Your Next Adventure</h1>

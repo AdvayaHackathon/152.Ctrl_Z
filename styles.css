@@ -9,6 +9,17 @@
     height: 100%;
     scroll-behavior: smooth;
   }
+
+  /* mic icon */
+
+  .mic{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: greenyellow;
+    z-index: 1;
+    border-radius: 50%;
+  }
   
   /* HEADER */
   header {
