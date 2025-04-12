@@ -1,10 +1,10 @@
 <header>
-    <div class="logo">HisTick</div>
+    <div class="logo"><img src="images/histrick.png" alt=""></div>
     <nav>
       <ul>
         <li><a href="index.php">Home🏠</a></li>
-        <li><a href="#">Favourites⭐</a></li>
-        <li><a href="#">Travel Bag🛍️</a></li>
+        <li><a href="http://localhost:8501">Translate⭐</a></li>
+        <li><a href="addtobag.php">Travel Bag🛍️</a></li>
       </ul>
     </nav>
       <?php  $isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;

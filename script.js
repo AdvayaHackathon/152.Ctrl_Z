@@ -1,5 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // === Search Box Logic ===
+  const searchButton = document.querySelector(".search-box button");
+  if (searchButton) {
+    searchButton.addEventListener("click", () => {
+      const input = document.getElementById("searchInput").value.toLowerCase().trim();
+
+      const pages = {
+        "bangalore": "bangalore.php",
+        "karnataka": "karnataka.php"
+        // You can add more keywords and corresponding page links here
+      };
+
+      if (pages[input]) {
+        window.location.href = pages[input];
+      } else {
+        alert("Page not found! Try typing: bangalore,karnataka");
+      }
+    });
+  }
+
+  // === Booking Form Logic ===
   const form = document.getElementById("bookingForm");
+
+  if (!form) {
+    // No booking form on this page — skip the rest
+    return;
+  }
+
   const adultInput = document.getElementById("adultCount");
   const childInput = document.getElementById("childCount");
   const totalPriceDisplay = document.getElementById("totalPrice");
@@ -7,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const adultPrice = 20;
   const childPrice = 10;
 
-  // Live total calculation
   function updateTotal() {
     const adults = parseInt(adultInput.value) || 0;
     const children = parseInt(childInput.value) || 0;
@@ -31,8 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const total = updateTotal();
 
     const qrData = `Name: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nAdults: ${adults}\nChildren: ${children}\nTotal: ₹${total}`;
-    
-    // Generate QR code in canvas
+
     const qrContainer = document.createElement("div");
     document.body.appendChild(qrContainer);
 
@@ -79,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     doc.setFont("helvetica", "bold");
     doc.setFontSize(18);
-    doc.text("Tokyo Skytree", pageWidth / 2, y, { align: "center" });
+    doc.text("Book Tickets", pageWidth / 2, y, { align: "center" });
 
     y += 8;
     doc.setFont("helvetica", "normal");

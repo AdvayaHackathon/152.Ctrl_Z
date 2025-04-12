@@ -23,8 +23,8 @@
 
       <div class="search-box">
         <label for="location">Location</label>
-        <input type="text" id="location" placeholder="Where do you want to go?" />
-        <a href="district.php"><button>Explore</button></a>
+        <input type="text" id="searchInput" placeholder="Where do you want to go?" />
+        <button>Explore</button>
       </div>
     </div>
   </section>
