@@ -443,8 +443,7 @@
                 but also reflect a period of religious tolerance and cultural synthesis that continues to inspire
                 admiration worldwide.</p>
             <audio controls>
-                <source src="history.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
+            <source src="audio_files/Pattadakal.mp3" type="audio/mpeg">
             </audio>
         </div>
         <div class="content-box hidden" id="videoContent">

@@ -407,8 +407,7 @@
         
         In essence, Tipu Sultan's Summer Palace is not just an architectural marvel but also a repository of history, offering a glimpse into the life and times of one of India's most formidable rulers.</p>
       <audio controls>
-        <source src="history.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+      <source src="audio_files/ipu Sultan's Summer Palace.mp3" type="audio/mpeg">
       </audio>
     </div>
     <div class="content-box hidden" id="videoContent">

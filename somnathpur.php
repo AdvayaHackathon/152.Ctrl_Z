@@ -419,8 +419,7 @@
         
         The Chennakesava Temple of Somanathapura stands as a remarkable example of Hoysala artistry and devotion. Its intricate carvings, architectural innovation, and historical resilience make it a significant monument in India's rich cultural tapestry. Visitors to the temple can experience the grandeur of a bygone era and appreciate the enduring legacy of the Hoysala dynasty</p>
       <audio controls>
-        <source src="history.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+      <source src="audio_files/Chennakesava.mp3" type="audio/mpeg">
       </audio>
     </div>
     <div class="content-box hidden" id="videoContent">

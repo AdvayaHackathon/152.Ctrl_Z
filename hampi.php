@@ -410,8 +410,7 @@
         
         Hampi stands as a testament to India's rich tapestry of history, mythology, and architectural brilliance. Its ruins continue to inspire awe, offering a window into a bygone era of grandeur and spiritual significance.</p>
       <audio controls>
-        <source src="history.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+        <source src="audio_files/Hampi.mp3" type="audio/mpeg">
       </audio>
     </div>
     <div class="content-box hidden" id="videoContent">

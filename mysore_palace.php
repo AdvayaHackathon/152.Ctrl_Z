@@ -405,8 +405,7 @@
         
         Today, Mysore Palace stands as a testament to the rich cultural heritage and architectural prowess of the Kingdom of Mysore, continuing to captivate visitors with its grandeur and historical significance.</p>
       <audio controls>
-        <source src="history.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+      <source src="audio_files/Mysore Palace.mp3" type="audio/mpeg">
       </audio>
     </div>
     <div class="content-box hidden" id="videoContent">
